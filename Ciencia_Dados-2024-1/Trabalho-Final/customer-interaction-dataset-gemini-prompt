@@ -1,0 +1,56 @@
+I'm doing a work on the Symphony of Customer Interactions dataset.
+
+It have the following readme text:
+
+"Welcome to the 'A Symphony of Customer Interactions' dataset in CSV format, where the intricate notes of customer engagement are transcribed into a structured, accessible form. This file encapsulates a diverse array of interactions, spanning across various digital channels, from social media platforms to email threads and live chat conversations.
+
+Each row in this CSV represents a distinct interaction, providing details such as timestamps, user IDs, and the textual content of the exchanges. Dive into the granular details of customer sentiments, preferences, and inquiries, all meticulously organized for seamless analysis.
+
+Whether you are a data scientist, researcher, or business analyst, this CSV file serves as a valuable resource for uncovering patterns, trends, and insights within the vast landscape of customer interactions. Leverage the power of this structured dataset to enhance your understanding of customer behavior and refine your analytical models.
+
+May your exploration of this dataset yield valuable insights and contribute to the symphony "
+
+These are the columns/features of the dataset and what I got from them.
+
+ Customer_ID - Customer unique identifier, for example: 'b60c27ef-27c4-47e0-b263-5894c26c6009'
+ Name - Customer name, for example: 'Joseph Swanson'
+ Age - Customer age, for example: 35
+ Gender - Customer gender, being a binary value 'Male' or 'Female'
+ Location - Customer city name, like 'Lake Paulton'
+ Purchase_Date - A list of dates when the customer bought the the products, like ['2024-01-20', '2023-12-23', '2022-08-05', '2021-11-05', '2021-11-28'].
+ Products - A list of products, like ['dd471a79-bd4a-4aba-88d2-b3b12ca80173', '9e7111b8-2e29-4ba8-aa7b-233dc2dcc9c5', '318e6b89-ba40-46d4ad22', '205sd-ccawdb-0dawdawd', '0056daw322dd-22005d-ad58']
+ Purchase_Amounts - A list of values, for each product bought, like [100.25, 582.20, 36.50, 410.19, 366.11]
+ Website_Visits - Amount of visits the customer made to the website, like 69
+ Click_Through_Rate - I don't know, but it's a real value, like 5.29
+ Pages_Viewed - Number of pages the customer viewed on this ecommerce, like 5
+ Time_Spent_on_Website - Time, in minutes, spent on the ecommerce website, like 42.07
+ Loyalty_Status - The loyalty status of the customer, being 'Platinum', 'Gold' and 'Silver'
+ Points_Earned - I don't know, but it's and integer valuje like 685
+ Rewards_Redeemed - I don't know, but it's an integer value like 16
+ Social_Media_Engagement - I don't know, but it's an integer value like 91. Could be the likes this customer gave to the ecommercer social media?
+ Followers_Count - The amount of followers the customer have, being an integer value like 3692
+ Hashtags_Used - A list of hashtags used, like ['common', 'analysis', 'free']
+ Support_Tickets_Raised - Number of support tickets raised, being an integer number like 7
+ Resolution_Time - The average time to solve this customer ticket? I dont know, but it's a real number like 36.45
+ Customer_Satisfaction_Score - An integer range from 1 to 5 specifying the customer satisfaction with the ecommerce I guess.
+ Income_Level - The income of the customer, being 'Low', 'Medium' and 'High'
+ Education_Level - The eduction level of the customer, being 'Bachelor', 'Master', 'PhD.' and 'High School'
+ Occupation - Customer current occupation, like 'Hydrogeologist, 'Public relations officer' and so on. This column have 639 unique values
+ Email_Open_Rate - The rate a customer open their email I guess, but I can't point if it's specifically the ecommerce emails, or all emails. Probably the former. Anyway, it's a real number like 18.63
+ Click_Through_Rate_Marketing - I don't know, but's probably related to the email_open_rate
+ Response_to_Campaign - Customer response to marketing campaings, being 'Negative', 'Neutral' and 'Positive'
+ Price_Elasticity - I really don't know, but it's an real number like 0.21, and can have negative number.
+ Price_Changes_Over_Time - A list of price changes, but I don't know what it means. Anyway, it's like this [-1.13, -2.5, 4.84, 3.7, -4.7]
+ Stock_Levels - Don't know, but it's an integer number
+ Sales_Velocity - Don't know either, but it's a real number
+ Reorder_Times - The amount of times the client reordered a product? I don't know. But it's an integer number.
+ 
+As you can see, all the features that use lists have 5 items each. Apparently this dataset assumes all client made 5 buys only. And the indexes are realated, so index 0 from Purchase_Date is the date that the product with index 0 from Products' list was bought. Also, this dataset have no NaN or Null values.
+
+I'm trying to test the following hypothesys.
+
+1 - Is there any relation between the customer age and it's purchase volume?
+2 - Is there any relation between the customer age and it's interaction and relations to the marketing campaings?
+3 - Is there any relation between the conversion rate and the customer website interactions?
+4 - Does the customer socioeconomic range affects it's interactions with the ecommerce?
+5 - Are marketing campaing reactions a good indicative of the customer interaction? Is it possible to predict their marketing campaing response based on their interactions?

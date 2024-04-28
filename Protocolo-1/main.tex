@@ -1,0 +1,239 @@
+%
+%
+% Law Review Article Template
+% A "universal" template 
+% 
+%
+
+\documentclass[article,12pt,oneside]{article}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage{lipsum} % You can remove this package if you do not want to use filler text.
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage[all]{nowidow}
+\usepackage{url}
+\usepackage{tocloft}
+\usepackage[headheight=80pt]{geometry}
+\usepackage{changepage}
+\usepackage{multirow}
+
+%------
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{12}{14}}
+\renewcommand\small{\@setfontsize\small{10}{12}}
+\renewcommand\scriptsize{\@setfontsize\scriptsize{7}{8}}
+\renewcommand\tiny{\@setfontsize\tiny{5}{6}}
+\renewcommand\large{\@setfontsize\large{13}{15}}
+\renewcommand\Large{\@setfontsize\Large{14}{16}}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+\renewcommand{\theparagraph}{\alph{paragraph}}
+\renewcommand{\thesubparagraph}{\roman{subparagraph}}
+%------
+\titleformat{\section}[block]{\normalfont\normalsize\scshape\center\textbf}{\thesection.}{1em}{}
+\titleformat{\subsection}[block]{\normalfont\itshape\center\normalfont\normalsize\scshape\center\textbf}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}{\normalfont}{\thesubsubsection.}{1em}{}
+\titleformat{\paragraph}{\normalfont}{\theparagraph.}{1em}{}
+\titleformat{\subparagraph}{\normalfont\small}{\thesubparagraph.}{1em}{}
+\titlespacing{\subparagraph}{0pt}{12pt}{12pt}
+\makeatother
+
+% A porra da coluna decente
+\newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
+
+\renewcommand\contentsname{\hspace*{\fill}\normalfont\normalsize\scshape Sumário\hspace*{\fill}}   
+\renewcommand\cftsecfont{\normalfont\normalsize\scshape}
+\renewcommand\cftsubsecfont{\normalfont\normalsize\itshape}
+\renewcommand\cftsubsubsecfont{\normalfont\normalsize}
+\renewcommand\cftparafont{\normalfont\normalsize}
+\renewcommand\cftsubparafont{\normalfont\small}
+\renewcommand\cftsecpagefont{\normalfont\normalsize}
+\renewcommand\abstractname{\normalfont\normalsize\scshape Resumo}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\cftsetindents{section}{3em}{3em}
+\cftsetindents{subsection}{4em}{3em}
+\cftsetindents{subsubsection}{5em}{3em}
+\cftsetindents{paragraph}{6em}{3em}
+\cftsetindents{subparagraph}{7em}{3em}
+
+\fancypagestyle{mypagestyle}{%
+  \fancyhf{}% Clear header/footer
+  \fancyhead[OC]{\uppercase{PROTOCOLANDO UM ESTUDO DE MAPEAMENTO SISTEMÁTICO EM ALOCAÇÕES E ESCALAÇÃO DE MÉDICOS}}% Title on Odd pages, center.
+  \fancyhead[OR]{\thepage}
+  \fancyhead[EC]{\uppercase{PROTOCOLANDO UM ESTUDO DE MAPEAMENTO SISTEMÁTICO EM ALOCAÇÕES E ESCALAÇÃO DE MÉDICOS}}% Title on Even page, center.
+  \fancyhead[EL]{\thepage}
+  \fancyfoot[O]{}
+  \fancyfoot[E]{}
+  \renewcommand{\headrulewidth}{0pt}% Removes header rule
+}
+\pagestyle{mypagestyle}
+
+\title{\Large{\uppercase{PROTOCOLANDO UM ESTUDO DE MAPEAMENTO SISTEMÁTICO EM ALOCAÇÕES E ESCALAÇÃO DE MÉDICOS}}}
+\author{\large\emph{Thiago Rafael Mariotti Claudio}\thanks{Instituto de Ciências Matemáticas e Computação.}}
+
+\date{}
+
+\begin{document}
+
+\urlstyle{same}
+
+\maketitle
+\thispagestyle{empty}
+
+%	\begin{abstract}
+%	\lipsum[2]
+%	\end{abstract}
+
+\tableofcontents
+\vspace{14pt}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% CONTEUDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\addcontentsline{toc}{section}{Informações Gerais}
+\section*{Informações Gerais}
+
+	\begin{itemize}
+		\item \textbf{Título:} A Systemic Mapping Study on Physician Rostering
+		\item \textbf{Autores:} Thiago Rafael Mariotti Claudio
+		\item \textbf{Descrição e Objetivos de Pesquisa:} Devido aos crescentes custos operacionais e de manutenção, juntamente com a emergente demanda por serviços hospitalares, as clínicas necessitam de modelos matemáticos que permitam um melhor manejo nos recursos dispostos, principalmente no que se refere à recursos humanos. Dessa proposta surge a necessidade de estudos e técnicas e que possam explicar, aplicar e gerenciar a força de trabalho hospitalar, como a distribuição de profissionais para realizar exames médicos, atendimentos e consultas, afim de garantir a maior cobertura de pacientes possível, atentando-se sempre as restrições individuais e coletivas dos profissionais da saúde, como cargas horárias e ponderações acerca de escalas pontuais.
+		
+	\end{itemize}
+
+\addcontentsline{toc}{section}{Questões de Pesquisa}
+\section*{Questões de Pesquisa}
+
+	\begin{itemize}
+		\item \textbf{RQ1:} Quais são os modelos matemáticos mais utilizados para alocação de médicos em diferentes contextos (hospitais, clínicas, etc.) e qual o impacto de cada um na cobertura de exames, custos e outros indicadores relevantes?
+		\item \textbf{RQ2:} Que tipo de estudos empíricos foram realizados para avaliar a efetividade dos modelos de alocação de médicos na prática?
+		\item \textbf{RQ3:} Como as abordagens de otimização na alocação de médicos se adaptam a diferentes contextos de saúde, como hospitais, clínicas de exames e unidades de atendimento domiciliar, levando em conta as particularidades de cada ambiente?
+		\item \textbf{RQ4:}Quais são os desafios mais significativos enfrentados pelos pesquisadores na alocação de médicos e como esses desafios têm sido abordados na literatura recente em Pesquisa Operacional e Otimização?
+	\end{itemize}
+
+\addcontentsline{toc}{section}{Metodologia e Desenvolvimento}
+\section*{Metodologia e Desenvolvimento}
+
+\addcontentsline{toc}{subsection}{Identificação de estudos}
+\subsection*{Identificação de estudos}
+
+Devido a natureza do estudo investigações da área de Pesquisa Operacional possuem diversas bases de publicação, que podem variar até mesmo dependendo do contexto da aplicação (como revistas voltadas à estudos em Saúde Pública ou Educação). Portanto, arguições que exploram técnicas matemáticas e computacionais para alocação e gerenciamento de recursos humanos em clínicas podem estar espalhadas em diversas bases bibliográficas, de modo que seja indicado o uso de um motor de busca como o \textit{Scopus} ou \textit{Google Scholar} para maior cobertura.
+
+\addcontentsline{toc}{subsubsection}{Palavras-Chave}
+\subsubsection*{Palavras-Chave}
+
+A tabela \ref{tab:palavras-chave-e-aplicacoes} contém as termos utilizadas na busca por estudos da área, agrupando-os em suas devidas aplicações na busca, como área de estudo e metodologia desejada para a investigação, priorizar vocábulos que delimitem o espaço de busca o suficiente para especializar a arguição.
+
+\begin{table}[h]
+	\centering
+	 \begin{adjustwidth}{-2mm}{}
+	 	\caption{Principais vocábulos para à busca}
+ 		\label{tab:palavras-chave-e-aplicacoes}
+		\begin{tabular}{|P{4cm}|P{11cm}|}
+			\hline
+			\small \textbf{Palavra-chave} & \small \textbf{Motivação} \\ \hline
+			\small \textit{Physician Rostering} & \small Termo comumente aplicado à prática de alocação e distribuição da equipe médica em instituições de saúde \\ \hline
+			\small \textit{Medic Allocation} & \small Sinônimo do item anterior \\ \hline
+			\small \textit{Staff Allocation} & \small Termo similar ao anterior, com maior abrangência da força de trabalho \\ \hline
+			\small \textit{Staff Scheduling} & \small Sinônimo do item anterior \\ \hline
+			\small \textit{Clinic} & \small Termo delimitador para aplicações exclusivas em clínicas \\ \hline
+			\small \textit{Hospital} & \small Similar ao item anterior, para contexto hospitalar \\ \hline
+			\small \textit{Clinic Staffing} & \small Termo aplicado à prática de alocação da força de trabalho geral em clínicas de exame \\ \hline
+			\small \textit{Optimization} & \small Inclusão de trabalhos visando otimização do sistema mediante aplicação de modelos matemáticos \\ \hline
+			\small \textit{Integer Programming} & \small Finalidade similar ao termo anterior \\ \hline
+			\small \textit{Mathematical Modeling} & \small Finalidade similar ao item anterior \\ \hline
+			\small \textit{Operations Research} & \small Termo para abrangência da grande área de estudo, englobando os itens anteriores \\ \hline
+		\end{tabular}
+	 \end{adjustwidth}
+\end{table}
+
+A tabela \ref{tab:evolucao-string-busca} mostra a evolução da \textit{string}, ordenadas por ordem de execução. Embora algumas consultas tenham retornado uma quantidade razoável de resultados (itens 6, 8, 12), os estudos obtidos tinham pouca relação com a temática do mapeamento, abrangendo áreas como Alocação de Operários em Fábricas e Otimização de Operações Hospitalares. A \textit{string} do item 13, embora complexa, resultou em uma boa quantidade de trabalhos diretamente ligados ao estudo proposto, e portanto foi a selecionada.
+
+\begin{table}[!ht]
+	\centering
+		\begin{adjustwidth}{-16mm}{}
+		\caption{Evolução da \textit{string} de busca}
+		\label{tab:evolucao-string-busca}
+		\begin{tabular}{|P{3mm}|P{12.5cm}|P{1.7cm}|P{2cm}|}
+			\hline
+			\small \textbf{\#} & \small \textbf{Buscador} & \small \textbf{Data da consulta} & \small \textbf{Resultados} \\ \hline
+			\small 1 & \small TITLE-ABS-KEY ( "physician rostering" ) & \small 02/04/2024 & \small 16 \\ \hline
+			2 & \small TITLE-ABS-KEY ( physician AND rostering ) & \small 02/04/2024 & \small 62 \\ \hline
+			3 & \small TITLE-ABS-KEY ( "Physician rostering problem" ) & \small 02/04/2024 & \small 11 \\ \hline
+			4 & \small TITLE-ABS-KEY ( ( "integer programming" ) AND ( "clinic" ) ) & \small 02/04/2024 & \small 117 \\ \hline
+			5 & \small TITLE-ABS-KEY ( ( ( *integer AND program* ) OR ( *optimization AND model* ) ) AND ( clinic* ) ) & \small 02/04/2024 & \small 10 \\ \hline
+			6 & \small TITLE-ABS-KEY ( ( ( "integer programming" ) OR ( "optimization modeling" ) OR ( "optimization model" ) ) AND ( clinic* ) ) & \small 02/04/2024 & \small 773 \\ \hline
+			7 & \small TITLE-ABS-KEY ( ( ( "integer programming" ) OR ( "optimization modeling" ) OR ( "model" ) OR ( "optimization model" ) ) AND ( "clinic" ) OR ( "hospital" ) ) & \small 02/04/2024 & \small 347.526 \\ \hline
+			8 & \small TITLE-ABS-KEY ( ( ( "integer programming" ) OR ( "optimization modeling" ) OR ( "optimization model" ) ) AND ( "clinic" ) OR ( "hospital" ) ) & \small 02/04/2024 & \small 1458 \\ \hline
+			9 & \small TITLE-ABS-KEY ( ( ( "integer programming" ) OR ( "optimization modeling" ) OR ( "optimization model" ) ) AND ( "clinic" ) OR ( "hospital" ) AND ( "exam" ) ) & \small 02/04/2024 & \small 9 \\ \hline
+			10 & \small TITLE-ABS-KEY ( ( ( "integer program*" ) OR ( "Optimizat* model*" ) ) AND ( ( "clinic" ) OR ( "roster*" ) ) ) & \small 02/04/2024 & \small 387 \\ \hline
+			11 & \small ALL ("optimization modeling" OR "optimization model" OR "mathematical model" OR "mathematical modeling" OR "integer model" OR "integer programming") AND ("physician roster" OR "physician rostering" OR "physician scheduling") & \small 02/04/2024 & \small 67 \\ \hline
+			12 & \small TITLE-ABS-KEY ( ( ( optimization OR mathematical OR integer ) AND ( modeling OR model OR programming ) ) AND ( ( physician OR medic OR doctor OR nurse* ) AND ( rostering OR roster OR schedule OR scheduling ) ) ) & \small 02/04/2024 & \small 846 \\ \hline
+			13 & \small TITLE-ABS-KEY ( "optimization modeling" OR "optimization model" OR "mathematical model" OR "mathematical modeling" OR "integer model" OR "integer programming" ) AND ( "physician roster" OR "physician rostering" OR "physician scheduling" OR "clinic staffing" OR "staff scheduling" ) & \small 02/04/2024 & \small 746 \\ \hline				
+	\end{tabular}
+\end{adjustwidth}
+\end{table}
+
+\newpage
+
+\addcontentsline{toc}{subsection}{Seleção e avaliação de estudos}
+\subsection*{Seleção e avaliação de estudos}
+
+Após a seleção inicial dos trabalhos, é necessário realizar uma filtragem, vez que nem sempre os objetivos e metodologias da pesquisa são completamente clarificados analisando apenas seções básicas, como título e resumo. Por isso os critérios de seleção abaixo são importantes para redução da base de estudos à uma população relevante.
+
+\addcontentsline{toc}{subsubsection}{Critérios de Seleção}
+\subsection*{Critérios de Seleção}
+
+A seguir estão listados os \textbf{critérios de inclusão} empenhados no mapeamento:
+\begin{itemize}
+	\item A população tratada no estudo é estritamente médicos em clínicas e hospitais;
+	\item O estudo revisa métodos ou técnicas de otimização e organização da força de trabalho em clínicas e hospitais;
+	\item O estudo propõe novas técnicas ou métodos para otimização e organização da força de trabalho em clínicas e hospitais.
+\end{itemize}
+Os itens listados abaixo são os \textbf{critérios de exclusão} aplicados:
+\begin{itemize}
+	\item O estudo não implementa técnicas de modelagem matemática como principal motivador para a solução do caso;
+	\item Foi escrito em língua diferente da língua inglesa;
+	\item É um resumo de um trabalho completo;
+	\item Não é um estudo primário;
+	\item Possui menos de 4 páginas;
+	\item Não está disponibilizado para amplo acesso.
+\end{itemize}
+
+\newpage
+
+Por fim, aplica-se o questionário de \textbf{Critérios de Qualidade} da tabela \ref{tab:criterios-qualidade-estudos} como forma de selecionar trabalhos bem condicionados
+
+\begin{table}[ht]
+	\centering
+%	\begin{adjustwidth}{0mm}{}
+		\caption{Questionário de Critérios de Qualidade}
+		\label{tab:criterios-qualidade-estudos}
+		\begin{tabular}{|P{4.3cm}|P{10cm}|}
+			\hline
+			\textbf{Grupo} & \textbf{Critérios} \\ \hline
+			\multirow{2}{*}{Critérios Gerais} & 1. Os resultados estão dispostos de forma clara e imparcial? \\ & 2. O estudo foi bem documentado ao ponto de reprodutibilidade \\ \hline
+			
+			\multirow{2}{*}{Sobre a coleta de dados} & 1. A instância de dados é disponibilizada, mesmo que de maneira obscurecida? \\ & 2. O estudo considera a variabilidade dos dados e a incerteza dos resultados? \\ \hline
+
+			\multirow{2}{*}{Sobre Otimização} & 1. O estudo expande ou contribui para a área de Alocação de Médicos? \\ & 2. O estudo apresenta novos métodos ou técnicas para o problema trabalhado?  \\ \hline
+
+			\multirow{2}{*}{Sobre práticas clínicas} & 1. O trabalho apresenta aplicações práticas para o contexto de alocação de médicos? \\ & 2. O trabalho pode ser adaptado para outros contextos em aplicações da saúde?  \\ \hline
+
+		\end{tabular}
+%	\end{adjustwidth}
+\end{table}
+
+É importante salientar que esta é a primeira versão de um protocolo para Mapeamento Sistemático, e portanto pode sofrer alterações ao longo da implementação do estudo, da mudança de práticas até metodologia analítica.
+
+
+%%%%%%%%%%%%%%%%%%%%% FIM DO CONTEUDO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

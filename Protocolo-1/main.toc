@@ -1,0 +1,8 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{Informações Gerais}{2}{}%
+\contentsline {section}{Questões de Pesquisa}{2}{}%
+\contentsline {section}{Metodologia e Desenvolvimento}{2}{}%
+\contentsline {subsection}{Identificação de estudos}{2}{}%
+\contentsline {subsubsection}{Palavras-Chave}{3}{}%
+\contentsline {subsection}{Seleção e avaliação de estudos}{4}{}%
+\contentsline {subsubsection}{Critérios de Seleção}{4}{}%
