@@ -1,0 +1,8 @@
+**/pycache/
+**/*.pyc
+**/*.class
+**/.DS_Store
+**/.idea/
+**/.vscode/
+**/.npm/
+**/node_modules/
