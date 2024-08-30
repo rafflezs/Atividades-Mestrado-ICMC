@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-from input_handler import InputHandler
-from adaline_class import Adaline
-
-if __name__ == "__main__":
-    
-    clf = Adaline(
-        X=InputHandler("data/opposite-of-inverted/5x5-1.txt").flatten_input(),
-        bias=0,
-        fill_method='random'
-        )
-    
-    
-=======
 import numpy as np
 from input_handler import InputHandler
 from adaline_class import Adaline
@@ -61,4 +47,3 @@ if __name__ == "__main__":
         test_network(label_test, "train", clf)
         for file_num in range(1, 7):
             test_network(label_test, f"test{file_num}", clf)
->>>>>>> ebae4b7eb5bf4275b55fd1b37b1129fd2bee5780
