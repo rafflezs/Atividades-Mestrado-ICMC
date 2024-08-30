@@ -6,3 +6,5 @@
 **/.vscode/
 **/.npm/
 **/node_modules/
+.gitmodules
+**/.gitmodules

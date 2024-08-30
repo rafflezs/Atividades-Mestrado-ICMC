@@ -50,6 +50,7 @@ class Adaline:
         - None
         """
         self.weights = np.random.rand(n_features)
+        self.weights_.append(self.weights.copy())
 
     def net_input(self, X: np.array) -> float:
         """
@@ -130,10 +131,10 @@ class Adaline:
         X (np.array): The input data to be classified.
 
         Returns:
-        int: The predicted class label (-1 or 1).
+        int: The predicted class label (1 or -1).
         """
         net_input = self.net_input(X)
-        return np.where(self.activation(net_input) >= 0.0, -1, 1) # Yes, it SHOULD BE inverted 'cause the exercise is inverted
+        return np.where(self.activation(net_input) >= 0.0, 1, -1)
 
     def get_errors(self):
         """
