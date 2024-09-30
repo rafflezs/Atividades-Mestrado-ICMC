@@ -1,5 +1,0 @@
-ucimlrepo
-numpy
-pandas<=2.0
-matplotlib
-seaborn
