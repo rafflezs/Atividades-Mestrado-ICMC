@@ -30,3 +30,8 @@ build/
 *.vscode/
 .idea/
 .DS_Store
+**/*.sqlite3
+**/*.db
+**/*.pdf
+**/*.h5
+**/*.keras

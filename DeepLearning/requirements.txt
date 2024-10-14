@@ -1,10 +1,22 @@
+# Manipulacao de dados
 pandas
 numpy
+
+# Processamento de imagens
+pillow
+opencv-python
+
+# Visualizacao de dados
 matplotlib
+seaborn
+
+# Machine Learning
 scikit-learn
-keras
+scikit-image
+keras-tcn # TCN para Keras
 tensorflow
 torch
-seaborn
+
+# Outros
 scipy
-pyomo
+pydot
